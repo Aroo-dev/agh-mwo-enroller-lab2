@@ -21,5 +21,9 @@ public class MeetingService {
 		Query query = this.session.createQuery(hql);
 		return query.list();
 	}
+	public Meeting getById(long id) {
+		return session.get(Meeting.class, id);
+	}
+
 
 }
